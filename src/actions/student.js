@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-import { GET_STUDENTS, STUDENT_ERROR } from './types';
+import { 
+    GET_STUDENTS,
+} from './types';
 
 export const getStudents = () => async dispatch => {
     try {
@@ -10,11 +12,11 @@ export const getStudents = () => async dispatch => {
             type: GET_STUDENTS,
             payload: res.data.content
         });
-    } catch (err) {
+    } catch (error) {
         /*dispatch({
             type: STUDENT_ERROR,
-            payload: { msg: err.response.statusText, status: err.response.status }
+            payload: { msg: error.response.statusText, status: err.response.status }
         });*/
-        console.error("error!");
+        console.error("error! getStudents!");
     }
 }

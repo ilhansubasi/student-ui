@@ -1,19 +1,19 @@
 import {
-    GET_STUDENTS,
+    SET_UPLOAD_STATUS
 } from '../actions/types';
 
 const initialState = {
-    students: []
+    fileProgress: 0
 }
 
 export default function(state = initialState, action) {
     const { type, payload } = action;
 
     switch(type) {
-        case GET_STUDENTS:
+        case SET_UPLOAD_STATUS:
             return {
                 ...state,
-                students: payload
+                fileProgress: payload
             }
         default:
             return state;
