@@ -3,7 +3,8 @@ import {
 } from '../actions/types';
 
 const initialState = {
-    students: []
+    students: [],
+    page: 0
 }
 
 export default function(state = initialState, action) {
@@ -13,7 +14,8 @@ export default function(state = initialState, action) {
         case GET_STUDENTS:
             return {
                 ...state,
-                students: payload
+                students: [...state.students, ...payload],
+                page: state.page + 1
             }
         default:
             return state;

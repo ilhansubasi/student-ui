@@ -1,3 +1,4 @@
 export const GET_STUDENTS = 'GET_STUDENTS';
 export const STUDENT_ERROR = 'STUDENT_ERROR';
 export const SET_UPLOAD_STATUS = 'SET_UPLOAD_STATUS';
+export const INC_PAGE = 'INC_PAGE';

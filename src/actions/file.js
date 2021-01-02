@@ -25,8 +25,8 @@ export const uploadFile = (file) => async dispatch => {
                 }
             }
         );
-        console.log("success! uploadFile!");
+        console.log("success!");
     } catch (error) {
-        console.error("error! uploadFile!");
+        console.error("error!");
     }
 }

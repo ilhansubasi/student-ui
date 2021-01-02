@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import Student from './Student';
 
@@ -7,13 +7,11 @@ import { getStudents } from '../actions/student';
 const Students = ({ getStudents, students }) => {
     const handleClick = e => {
         e.preventDefault();
-        getStudents();
+        getStudents(students.page);
     }
 
     return (
-        <Fragment>
-            <button onClick={handleClick}>Get Students</button>
-
+        <div>
             {students.students.length > 0 ? (
                 <table>
                     <thead>
@@ -32,7 +30,9 @@ const Students = ({ getStudents, students }) => {
                     </tbody>
                 </table>
             ): <p>No student found...</p>}
-        </Fragment>
+
+            <button onClick={handleClick}>Get Students</button>
+        </div>
     )
 }
 
