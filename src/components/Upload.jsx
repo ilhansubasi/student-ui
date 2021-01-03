@@ -27,6 +27,7 @@ function Upload({ uploadFile, fileStatus }) {
                 <input
                     type='file'
                     onChange={onChange}
+                    accept=".xlsx"
                 />
                 <input
                     type='submit'
