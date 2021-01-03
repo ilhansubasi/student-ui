@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Student from './Student';
 import Button from 'react-bootstrap/Button';
+import Table from 'react-bootstrap/Table'
 
 import { getStudents } from '../actions/student';
 
@@ -14,7 +15,7 @@ const Students = ({ getStudents, students }) => {
     return (
         <div>
             {students.students.length > 0 ? (
-                <table>
+                <Table striped bordered hov>
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -29,7 +30,7 @@ const Students = ({ getStudents, students }) => {
                             <Student key={student.id} student={student}/>
                         ))}
                     </tbody>
-                </table>
+                </Table>
             ): <p>No student found...</p>}
 
             <Button variant="primary" onClick={handleClick}>Get Students</Button>
