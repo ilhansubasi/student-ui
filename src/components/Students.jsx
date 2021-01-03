@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Student from './Student';
+import Button from 'react-bootstrap/Button';
 
 import { getStudents } from '../actions/student';
 
@@ -31,7 +32,7 @@ const Students = ({ getStudents, students }) => {
                 </table>
             ): <p>No student found...</p>}
 
-            <button onClick={handleClick}>Get Students</button>
+            <Button variant="primary" onClick={handleClick}>Get Students</Button>
         </div>
     )
 }
