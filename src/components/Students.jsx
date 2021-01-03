@@ -32,8 +32,9 @@ const Students = ({ getStudents, students }) => {
                     </tbody>
                 </Table>
             ): <p>No student found...</p>}
-
-            <Button variant="primary" onClick={handleClick}>Get Students</Button>
+            <div className="text-center">
+                <Button variant="primary" onClick={handleClick}>Get Students</Button>
+            </div>
         </div>
     )
 }
