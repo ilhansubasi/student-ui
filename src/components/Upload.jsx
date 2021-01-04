@@ -34,7 +34,7 @@ function Upload({ uploadFile, fileStatus }) {
                     value='Upload'
                 />
             </form>
-            Percentage: {fileStatus.fileProgress}
+            {fileStatus.fileProgress > 0 ? 'Percentage: ' + fileStatus.fileProgress : ''}
         </Fragment>
     )   
 }
