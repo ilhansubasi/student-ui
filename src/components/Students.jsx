@@ -31,9 +31,9 @@ const Students = ({ getStudents, students }) => {
                         ))}
                     </tbody>
                 </Table>
-            ): <p>No student found...</p>}
+            ): <p className="text-center">Click "List Student" button to load student.</p>}
             <div className="text-center">
-                <Button variant="primary" onClick={handleClick}>Get Students</Button>
+                <Button variant="primary" onClick={handleClick}>List Students</Button>
             </div>
         </div>
     )
