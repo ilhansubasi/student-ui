@@ -1,5 +1,6 @@
 import {
-    SET_UPLOAD_STATUS
+    SET_UPLOAD_STATUS,
+    UPLOAD_ERROR
 } from '../actions/types';
 
 const initialState = {
@@ -15,6 +16,8 @@ export default function(state = initialState, action) {
                 ...state,
                 fileProgress: payload
             }
+        case UPLOAD_ERROR:
+            alert(payload.msg);
         default:
             return state;
     }

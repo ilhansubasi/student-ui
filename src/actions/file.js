@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 import { 
-    SET_UPLOAD_STATUS
+    SET_UPLOAD_STATUS,
+    UPLOAD_ERROR
 } from './types';
 
 export const setUploadStatus = (progress) => ({
@@ -25,8 +26,10 @@ export const uploadFile = (file) => async dispatch => {
                 }
             }
         );
-        console.log("success!");
     } catch (error) {
-        console.error("error!");
+        dispatch({
+            type: UPLOAD_ERROR,
+            payload: { msg: error.response.statusText, status: error.response.status }
+        });
     }
 }

@@ -1,5 +1,6 @@
 import {
     GET_STUDENTS,
+    STUDENT_ERROR
 } from '../actions/types';
 
 const initialState = {
@@ -17,6 +18,8 @@ export default function(state = initialState, action) {
                 students: [...state.students, ...payload],
                 page: state.page + 1
             }
+        case STUDENT_ERROR:
+            alert(payload.msg);
         default:
             return state;
     }
