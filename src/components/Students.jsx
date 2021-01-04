@@ -15,7 +15,7 @@ const Students = ({ getStudents, students }) => {
     return (
         <div>
             {students.students.length > 0 ? (
-                <Table striped bordered hov>
+                <Table striped bordered>
                     <thead>
                         <tr>
                             <th>ID</th>
