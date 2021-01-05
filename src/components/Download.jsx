@@ -14,7 +14,7 @@ function Download({ downloadFile }) {
     return (
         <Fragment>
             <div className="text-center" className="m-3 text-center">
-                <Button to="/xlsx/" variant="primary" >Download all students</Button>
+                <Button variant="primary" onClick={handleClick} download="students.xlsx">Download all students</Button>
             </div>
         </Fragment>
     )
