@@ -15,7 +15,7 @@ export const setUploadStatus = (progress) => ({
 export const uploadFile = (file) => async dispatch => {
     try {
         await axios.post(
-            '/xlsx/', 
+            'https://students-restfull-api.herokuapp.com/xlsx/',
             file,
             {
                 headers: {
@@ -39,7 +39,7 @@ export const uploadFile = (file) => async dispatch => {
 export const downloadFile = () => async dispatch => {
     try {
         const res = await axios.get(
-            '/xlsx/',
+            'https://students-restfull-api.herokuapp.com/xlsx/',
             {
                 headers: {
                     'Content-Type': 'application/octet-stream',

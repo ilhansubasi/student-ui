@@ -20,6 +20,7 @@ export default function(state = initialState, action) {
             }
         case STUDENT_ERROR:
             alert(payload.msg);
+            break;
         default:
             return state;
     }

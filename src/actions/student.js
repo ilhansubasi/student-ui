@@ -15,7 +15,7 @@ export const incPage = () => {
 export const getStudents = (page) => async dispatch => {
     try {
 
-        const res = await axios.get(`/student/?pageNo=${page}`);
+        const res = await axios.get(`https://students-restfull-api.herokuapp.com/student/?pageNo=${page}`);
 
         dispatch({
             type: GET_STUDENTS,
