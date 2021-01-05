@@ -2,7 +2,9 @@ import axios from 'axios';
 
 import { 
     SET_UPLOAD_STATUS,
-    UPLOAD_ERROR
+    UPLOAD_ERROR,
+    DOWNLOAD_FILE,
+    DOWNLOAD_ERROR
 } from './types';
 
 export const setUploadStatus = (progress) => ({
@@ -29,6 +31,33 @@ export const uploadFile = (file) => async dispatch => {
     } catch (error) {
         dispatch({
             type: UPLOAD_ERROR,
+            payload: { msg: error.response.statusText, status: error.response.status }
+        });
+    }
+}
+
+export const downloadFile = () => async dispatch => {
+    try {
+        console.log("++++++++");
+        const res = await axios.get(
+            '/xlsx/',
+            {
+                headers: {
+                    'Content-Type': 'application/octet-stream',
+                    'Accept': 'application/octet-stream',
+                    'Content-Disposition': 'attachment; filename=students.xlsx',
+                    'Content-Transfer-Encoding': 'Binary'
+                }
+            }
+        );
+
+        dispatch({
+            type: DOWNLOAD_FILE,
+            payload: res.data
+        });
+    } catch (error) {
+        dispatch({
+            type: DOWNLOAD_ERROR,
             payload: { msg: error.response.statusText, status: error.response.status }
         });
     }

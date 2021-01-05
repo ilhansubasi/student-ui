@@ -3,3 +3,5 @@ export const STUDENT_ERROR = 'STUDENT_ERROR';
 export const SET_UPLOAD_STATUS = 'SET_UPLOAD_STATUS';
 export const INC_PAGE = 'INC_PAGE';
 export const UPLOAD_ERROR = 'UPLOAD_ERROR';
+export const DOWNLOAD_FILE = 'DOWNLOAD_FILE';
+export const DOWNLOAD_ERROR = 'DOWNLOAD_ERROR';

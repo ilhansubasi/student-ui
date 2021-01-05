@@ -2,6 +2,7 @@ import './App.css';
 
 import Students from './components/Students';
 import Upload from './components/Upload';
+import Download from './components/Download';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       </div>
       <Upload />
       <Students />
+      <Download />
     </div>
   );
 }
