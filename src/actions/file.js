@@ -55,9 +55,12 @@ export const downloadFile = () => async dispatch => {
             payload: res.data
         });
     } catch (error) {
+        console.error('download error');
+        /*
         dispatch({
             type: DOWNLOAD_ERROR,
             payload: { msg: error.response.statusText, status: error.response.status }
         });
+        */
     }
 }

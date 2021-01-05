@@ -14,7 +14,7 @@ function Download({ downloadFile }) {
     return (
         <Fragment>
             <div className="m-3 text-center">
-                <Button variant="primary" onClick={handleClick}>Download all students</Button>
+                <a variant="primary" href='https://students-restfull-api.herokuapp.com/xlsx/' download>Download all students</a>
             </div>
         </Fragment>
     )
