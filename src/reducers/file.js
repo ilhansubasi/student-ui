@@ -23,7 +23,7 @@ export default function(state = initialState, action) {
         case UPLOAD_ERROR:
             alert(payload.msg);
         case DOWNLOAD_FILE:
-            return payload;
+            console.log('download file');
         default:
             return state;
     }

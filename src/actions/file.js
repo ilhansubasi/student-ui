@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+import download from "downloadjs";
 import { 
     SET_UPLOAD_STATUS,
     UPLOAD_ERROR,
@@ -46,11 +46,11 @@ export const downloadFile = () => async dispatch => {
                     'Content-Type': 'application/octet-stream',
                     'Accept': 'application/octet-stream',
                     'Content-Disposition': 'attachment; filename=students.xlsx',
-                    'Content-Transfer-Encoding': 'Binary'
+                    'Transfer-Encoding': 'chunked'
                 }
             }
         );
-
+        download(res.data, 'students.xlsx');
         dispatch({
             type: DOWNLOAD_FILE,
             payload: res.data
