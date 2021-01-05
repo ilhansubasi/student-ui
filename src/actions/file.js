@@ -38,7 +38,6 @@ export const uploadFile = (file) => async dispatch => {
 
 export const downloadFile = () => async dispatch => {
     try {
-        console.log("++++++++");
         const res = await axios.get(
             '/xlsx/',
             {

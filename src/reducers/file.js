@@ -22,8 +22,10 @@ export default function(state = initialState, action) {
             }
         case UPLOAD_ERROR:
             alert(payload.msg);
+            break;
         case DOWNLOAD_FILE:
             console.log('download file');
+            break;
         default:
             return state;
     }
