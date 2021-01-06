@@ -7,7 +7,6 @@ function Download({ downloadFile }) {
 
     const handleClick = e => {
         e.preventDefault();
-        console.log("farklı birşeyler");
         downloadFile();
     }
 
